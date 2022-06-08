@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "branch_diff"
+version = "0.1.0"
+description = ""
+authors = ["Ilya Savitsky <ipsavitsky234@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+GitPython = "^3.1.27"
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.1.2"
+black = {version = "^22.3.0", allow-prereleases = true}
+
+[tool.pytest.ini_options]
+log_cli = true
+log_cli_level = "DEBUG"
+log_cli_format = "%(asctime)s [%(levelname)8s] %(message)s (%(filename)s:%(lineno)s)"
+log_cli_date_format = "%Y-%m-%d %H:%M:%S"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
